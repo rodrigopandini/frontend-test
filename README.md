@@ -11,9 +11,10 @@ Pode usar qualquer framework de CSS para acelerar o desenvolvimento, pois o resu
 O suporte de navegadores é para IE Edge+. 
 
 ### Coisas que sua web app deve permitir
-- Busca por filmes
-- Cadastro de usuários (pode ser usando somente o WebStorage mesmo não precisa adicionar banco de dados)
-- Cada usuário deve poder marcar filmes como favoritos
+- Busca por filmes (Titulo e Diretores)
+- Listar os filmes com seus respectivos thumbnails
+- Permitir a visualização individual de cada filme
+- Permitir criar uma lista de favoritos e adicionar/remover filmes nela (A lista pode ser somente por sessão não precisa salvar em nenhum banco de dados)
 
 ### Coisas a serem avaliadas
 - Clareza do código
