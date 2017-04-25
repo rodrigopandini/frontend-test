@@ -1,0 +1,42 @@
+<div fxLayout="column" fxFlex>
+
+  <md-toolbar>
+    <div fxLayout="row" fxLayoutAlign="start center" fxFlex="70">
+      <md-input-container fxFlex="95">
+        <input mdInput type="text" placeholder="Search for movies" [formControl]="searchControl">
+      </md-input-container>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start center" fxFlex="20">
+      <md-select placeholder="Search by" [(ngModel)]="searchType" fxFlex="95">
+        <md-option *ngFor="let type of types" [value]="type.code">{{ type.name }}</md-option>
+      </md-select>
+    </div>
+  </md-toolbar>
+
+  <div padding>
+
+    <!--<div class="mdl-cell mdl-cell--12-col"  *ngIf="errorMessage">
+      <p class="error">{{errorMessage}}</p>
+    </div>-->
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--3-col" *ngFor="let movie of movies">
+
+        <md-card [routerLink]="['/movies', movie.title]">
+          <md-card-content>
+            <img md-card-image src="{{movie.poster}}">
+            <h4>{{movie.title}}</h4>
+            <div>
+              <rating [(ngModel)]="movie.rating" [float]="true"></rating>
+            </div>
+            <div class="mdl-card__supporting-text">
+              {{movie.summary}}
+            </div>
+          </md-card-content>
+        </md-card>
+
+      </div>
+    </div>
+
+	</div>
+</div>

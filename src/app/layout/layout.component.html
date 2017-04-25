@@ -1,0 +1,49 @@
+<mdl-layout mdl-layout-fixed-header>
+
+  <mdl-layout-header>
+    <mdl-layout-header-row>
+      <mdl-layout-title>
+        <a [routerLink]="['']" routerLinkActive="active" class="header-title">
+          <div class="logo"></div>
+        </a>
+      </mdl-layout-title>
+
+      <mdl-layout-spacer></mdl-layout-spacer>
+
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" [routerLink]="['/movies']" routerLinkActive="active">
+          <md-icon md-list-icon>movie</md-icon> Movies
+        </a>
+        <a class="mdl-navigation__link" [routerLink]="['/favorites']" routerLinkActive="active">
+          <md-icon md-list-icon>favorite</md-icon> Favorites
+        </a>
+      </nav>
+    </mdl-layout-header-row>
+  </mdl-layout-header>
+
+  <mdl-layout-drawer>
+    <mdl-layout-title>Menu</mdl-layout-title>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" [routerLink]="['']">
+        <md-icon md-list-icon>home</md-icon> Home
+      </a>
+      <a class="mdl-navigation__link" [routerLink]="['/movies']" routerLinkActive="active">
+        <md-icon md-list-icon>movie</md-icon> Movies
+      </a>
+      <a class="mdl-navigation__link" [routerLink]="['/favorites']" routerLinkActive="active">
+        <md-icon md-list-icon>favorite</md-icon> Favorites
+      </a>
+    </nav>
+
+    <mdl-layout-spacer></mdl-layout-spacer>
+
+    <button mdl-button mdl-button-type="raised" mdl-ripple mdl-colored="primary">
+      <md-icon md-list-icon>info</md-icon> Info
+    </button>
+  </mdl-layout-drawer>
+
+  <mdl-layout-content>
+    <router-outlet></router-outlet>
+  </mdl-layout-content>
+
+</mdl-layout>

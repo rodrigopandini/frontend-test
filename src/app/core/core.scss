@@ -1,0 +1,28 @@
+/* Margins */
+[margin-right] {
+	margin-right: 16px !important;
+}
+[margin-top] {
+	margin-top: 16px !important;
+}
+[margin-bottom] {
+	margin-bottom: 16px !important;
+}
+[margin-left] {
+	margin-left: 16px !important;
+}
+
+/* Box model */
+[padding-left] {
+	padding-left: 16px;
+}
+[padding-right] {
+	padding-right: 16px;
+}
+[padding] {
+	padding: 16px;
+}
+
+.hidden {
+	visibility: hidden;
+}

@@ -1,0 +1,95 @@
+{
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"project": {
+		"name": "pismflix"
+	},
+	"packageManager": "yarn",
+	"apps": [
+		{
+			"root": "src",
+			"outDir": "dist",
+			"assets": [
+				"favicon.ico",
+				"humans.txt",
+				"robots.txt"
+			],
+			"index": "index.html",
+			"main": "main.ts",
+			"polyfills": "polyfills.ts",
+			"test": "test.ts",
+			"tsconfig": "tsconfig.app.json",
+			"testTsconfig": "tsconfig.spec.json",
+			"prefix": "app",
+			"styles": [
+				"main.scss"
+			],
+			"scripts": [
+				"../node_modules/hammerjs/hammer.js"
+			],
+			"environmentSource": "environments/environment.ts",
+			"environments": {
+				"prod": "environments/environment.prod.ts",
+				"dev": "environments/environment.ts"
+			}
+		}
+	],
+	"e2e": {
+		"protractor": {
+			"config": "./protractor.conf.js"
+		}
+	},
+	"lint": [
+		{
+      "files": "src/**/*.ts",
+			"project": "src/tsconfig.app.json"
+		},
+		{
+      "files": "src/**/*.spec.ts",
+			"project": "src/tsconfig.spec.json"
+		},
+		{
+      "files": "e2e/**/*.ts",
+			"project": "e2e/tsconfig.e2e.json"
+		}
+	],
+	"test": {
+		"karma": {
+			"config": "./karma.conf.js"
+		},
+		"codeCoverage": {
+			"exclude": [
+				"src/polyfills.ts",
+				"**/test.ts"
+			]
+		}
+	},
+	"defaults": {
+		"styleExt": "scss",
+		"class": {
+			"spec": true
+		},
+		"component": {
+			"inlineTemplate": false,
+			"inlineStyle": false,
+			"prefix": true,
+			"spec": true
+		},
+		"directive": {
+			"prefix": true,
+			"spec": true
+		},
+		"guard": {
+			"spec": true
+		},
+		"module": {
+			"spec": true,
+			"routing": true
+		},
+		"pipe": {
+			"spec": true
+		},
+		"service": {
+			"spec": true
+		}
+	}
+}

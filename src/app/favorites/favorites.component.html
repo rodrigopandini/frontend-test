@@ -1,0 +1,33 @@
+<div fxLayout="column" fxFlex>
+
+  <md-toolbar>
+    <span>Favorites Movies</span>
+  	<span fxFlex></span>
+  	<div fxLayout="row" fxLayoutAlign="start center">
+			<md-icon>favorites</md-icon>
+		</div>
+  </md-toolbar>
+
+  <div padding>
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--3-col" *ngFor="let movie of movies">
+
+        <md-card [routerLink]="['/movies', movie.title]">
+          <md-card-content>
+            <img md-card-image src="{{movie.poster}}">
+            <h4>{{movie.title}}</h4>
+            <div>
+              <rating [(ngModel)]="movie.rating" [float]="true"></rating>
+            </div>
+            <div class="mdl-card__supporting-text">
+              {{movie.summary}}
+            </div>
+          </md-card-content>
+        </md-card>
+
+      </div>
+    </div>
+
+	</div>
+</div>

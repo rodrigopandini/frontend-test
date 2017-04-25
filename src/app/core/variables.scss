@@ -1,0 +1,19 @@
+@import "~@angular/material/core/theming/theming";
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss (imported above).
+// For each palette, you can optionally specify a default, lighter, and darker hue.
+
+// Primary palette
+$pism-primary-palette: mat-palette($mat-light-blue);
+// Use this for highlighting secondary actions.
+$pism-accent-palette: mat-palette($mat-pink);
+// Use this for highlighting errors or such.
+$pism-warn-palette: mat-palette($mat-red);
+
+
+// Define some colors for reusability
+$pism-background-color: map_get($mat-light-theme-background, background);
+
+$pism-primary-color: mat-color($pism-primary-palette);
+$pism-accent-color: mat-color($pism-accent-palette);
+$pism-warn-color: mat-color($pism-warn-palette);

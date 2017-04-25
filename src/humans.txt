@@ -1,0 +1,21 @@
+# humanstxt.org
+# Humans responsible for the project & technology colophon
+
+# TEAM
+
+Rodrigo Pandini
+https://github.com/rodrigopandini
+
+# TECHNOLOGY COLOPHON
+
+ES6, TypeScript
+HTML5, CSS3
+Angular CLI
+Angular, CoreJS
+Material 2, HammerJS, Material Icons
+Angular Flex Layout
+Material Design Lite
+Firebase
+NPM, Yarn
+Protractor, Karma, Jasmine
+Travis CI, Saucelabs

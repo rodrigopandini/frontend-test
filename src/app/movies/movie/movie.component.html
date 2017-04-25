@@ -1,0 +1,53 @@
+<div fxLayout="column" fxFlex>
+
+	<md-toolbar>
+    <button mdl-button mdl-ripple [routerLink]="['/movies']">
+      <md-icon>arrow_back</md-icon>
+    </button>
+    <div fxLayout="row" fxLayoutAlign="start center">
+			<span>Movie: "</span>
+      <span *ngIf="movie">{{movie.title}}</span>
+      <span>"</span>
+		</div>
+		<span fxFlex></span>
+		<div fxLayout="row" fxLayoutAlign="start center">
+			<md-icon>movie</md-icon>
+		</div>
+	</md-toolbar>
+
+	<div padding>
+
+    <div fxLayout="row" fxLayoutAlign="start center" *ngIf="errorMessage">
+      <p class="error">{{errorMessage}}</p>
+    </div>
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+
+        <md-card *ngIf="movie">
+          <md-card-content>
+            <img md-card-image src="{{movie.poster}}">
+            <h4>{{movie.title}}</h4>
+            <div>
+              <rating [(ngModel)]="movie.rating" [float]="true"></rating>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p><span class="label">Summary:</span> {{movie.summary}}</p>
+              <p><span class="label">Year:</span> {{movie.year}}</p>
+              <p><span class="label">Category:</span> {{movie.category}}</p>
+              <p><span class="label">Director:</span> {{movie.director}}</p>
+              <p><span class="label">Cast: </span> {{movie.cast}}
+            </div>
+          </md-card-content>
+          <md-card-actions>
+            <button mdl-button mdl-button-type="raised" mdl-ripple mdl-colored="primary"
+                    (click)="saveToFavorites(movie)">
+              <md-icon>favorite</md-icon>
+            </button>
+          </md-card-actions>
+        </md-card>
+
+      </div>
+    </div>
+	</div>
+</div>

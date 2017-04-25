@@ -1,0 +1,28 @@
+@import "../core/mixins";
+
+:host {
+	@include fullscreen;
+}
+
+md-progress-spinner {
+	@include spinner-size();
+}
+
+md-card {
+  min-height: 278px;
+  cursor: pointer;
+}
+
+video {
+  margin: 5px 0 5px 0;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.mdl-card__supporting-text {
+  padding: 5px 0 0 0;
+}
+
+.error {
+  color:red;
+}

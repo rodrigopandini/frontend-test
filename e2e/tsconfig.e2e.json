@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"sourceMap": true,
+		"declaration": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"moduleResolution": "node",
+		"noImplicitAny": true,
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+		"strictNullChecks": true,
+		"lib": [
+			"es2017"
+		],
+		"outDir": "../out-tsc-e2e",
+		"module": "commonjs",
+		"target": "es6",
+		"types":[
+			"jasmine",
+			"jasmine-expect",
+			"node"
+		]
+	}
+}
